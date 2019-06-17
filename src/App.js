@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import "./App.scss";
 
+import "./App.scss";
 import PlayVideo from "./PlayVideo";
 
 function App() {
-  const [state, onchange] = useState({
-    file: ""
-  });
-  const handleImageChange = e => {
-    onchange({ file: URL.createObjectURL(e.target.files[0]) });
+  const [fileUrl, setFileUrl] = useState("");
+
+  const handleChange = e => {
+    setFileUrl(URL.createObjectURL(e.target.files[0]))
   };
+
   return (
     <div className="App">
-      {state.file ? (
-        <PlayVideo video={state.file} />
+      {fileUrl ? (
+        <PlayVideo video={fileUrl} />
       ) : (
-        <input className='file' type="file" label="Title" onChange={e => handleImageChange(e)} />
+        <input className='file' type="file" label="Video" onChange={handleChange} />
       )}
     </div>
   );
