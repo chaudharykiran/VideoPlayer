@@ -34,7 +34,10 @@ iframe {
 }
 
 video {
+  position: relative;
+  left: 50%;
   height: 100%;
+  transform: translateX(-50%);
   object-fit: fill;
 }
 
