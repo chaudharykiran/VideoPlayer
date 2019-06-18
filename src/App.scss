@@ -34,8 +34,8 @@ iframe {
 }
 
 video {
-  width: 100%;
   height: 100%;
+  object-fit: fill;
 }
 
 %center-horizontal {
@@ -363,7 +363,7 @@ img {
     border-right-color: #212121;
     border-bottom-color: #252525;
     z-index: 99;
-
+    overflow: hidden;
     // &:after {
     //   @extend %sudos;
     //   @extend %center-all;
