@@ -4,7 +4,7 @@ function Content(props) {
   return (
     <React.Fragment>
       {props.video ? (
-        <video src={props.video} type="video/mp4" controls />
+        <video src={props.video} type="video/mp4" autoPlay />
       ) : (
         <img src="iphone.jpg" alt='iphone' />
       )}
